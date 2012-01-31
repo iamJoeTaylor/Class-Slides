@@ -556,7 +556,7 @@ function addGeneralStyle() {
   var el = document.createElement('link');
   el.rel = 'stylesheet';
   el.type = 'text/css';
-  el.href = 'https://raw.github.com/iamJoeTaylor/Class-Slides/master/assets/styles.css';
+  el.href = 'http://iamjoetaylor.github.com/Class-Slides/assets/styles.css';
   document.body.appendChild(el);
   
   var el = document.createElement('meta');

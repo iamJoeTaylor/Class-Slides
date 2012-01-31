@@ -96,7 +96,7 @@ body {
 
 .slides.template-im2012 > article:not(.nobackground):not(.biglogo) {
   background: url(images/colorbar.png) 0 600px repeat-x,
-              url(images/googleio-logo.png) 640px 625px no-repeat;
+              url(images/big_logo_1.jpg) 640px 625px no-repeat;
 
   background-size: 100%, 225px;  
 
@@ -147,11 +147,11 @@ body {
 /* Slide styles */
 
 .slides.template-default article.biglogo {
-  background: white url(images/google-logo.png) 50% 50% no-repeat;
+  background: white url(images/big_logo_1.jpg) 50% 50% no-repeat;
 }
 
 .slides.template-im2012 article.biglogo {
-  background: white url(images/googleio-logo.png) 50% 50% no-repeat;
+  background: white url(images/big_logo_1.jpg) 50% 50% no-repeat;
 
   background-size: 600px;
 }
