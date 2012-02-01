@@ -166,13 +166,16 @@ body {
   -o-transform: translate(-2040px);
   -moz-transform: translate(-2040px);
   -webkit-transform: translate3d(-2040px, 0, 0);
+  opacity:0;
 }
 .slides > article.past {
   display: block;
-  transform: translate(-1020px);
-  -o-transform: translate(-1020px);
-  -moz-transform: translate(-1020px);
-  -webkit-transform: translate3d(-1020px, 0, 0);
+  -moz-transform: scale(.75) rotate(0deg) translate(-1200px, 0px) skew(0deg, 0deg);
+  -webkit-transform: scale(.75) rotate(0deg) translate(-1200px, 0px) skew(0deg, 0deg);
+  -o-transform: scale(.75) rotate(0deg) translate(-1200px, 0px) skew(0deg, 0deg);
+  -ms-transform: scale(.75) rotate(0deg) translate(-1200px, 0px) skew(0deg, 0deg);
+  transform: scale(.75) rotate(0deg) translate(-1200px, 0px) skew(0deg, 0deg);
+  opacity:.4;
 }
 .slides > article.current {
   display: block;
@@ -183,11 +186,12 @@ body {
 }
 .slides > article.next {
   display: block;
-  -moz-transform: scale(.75) rotate(0deg) translate(1020px, 0px) skew(0deg, 0deg);
--webkit-transform: scale(.75) rotate(0deg) translate(1020px, 0px) skew(0deg, 0deg);
--o-transform: scale(.75) rotate(0deg) translate(1020px, 0px) skew(0deg, 0deg);
--ms-transform: scale(.75) rotate(0deg) translate(1020px, 0px) skew(0deg, 0deg);
-transform: scale(.75) rotate(0deg) translate(1020px, 0px) skew(0deg, 0deg);
+  -moz-transform: scale(.75) rotate(0deg) translate(1200px, 0px) skew(0deg, 0deg);
+  -webkit-transform: scale(.75) rotate(0deg) translate(1200px, 0px) skew(0deg, 0deg);
+  -o-transform: scale(.75) rotate(0deg) translate(1200px, 0px) skew(0deg, 0deg);
+  -ms-transform: scale(.75) rotate(0deg) translate(1200px, 0px) skew(0deg, 0deg);
+  transform: scale(.75) rotate(0deg) translate(1200px, 0px) skew(0deg, 0deg);
+  opacity:.4;
 }
 .slides > article.far-next {
   display: block;
@@ -195,6 +199,7 @@ transform: scale(.75) rotate(0deg) translate(1020px, 0px) skew(0deg, 0deg);
   -o-transform: translate(2040px);
   -moz-transform: translate(2040px);
   -webkit-transform: translate3d(2040px, 0, 0);
+  opacity:0;
 }
 
 .slides.layout-widescreen > article.far-past,
