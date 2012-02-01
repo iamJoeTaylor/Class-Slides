@@ -387,6 +387,10 @@ li {
 
   margin-bottom: .5em;
 }
+ul li ul li	{
+	font-size:20px;
+	line-height:26px;
+}
 li::before {
   content: "·";
 
@@ -437,6 +441,9 @@ iframe {
 h3 + iframe {
   margin-top: 40px;
   height: 540px;
+}
+article.fill	{
+	border:0;
 }
 
 article.fill iframe {
@@ -614,115 +621,3 @@ article.smaller q::after {
   color: rgb(127, 0, 127);
 }  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#speaker-note {
-    -moz-transition: top 0.5s ease-in-out 0s;
-    background-color: white;
-    height: 20%;
-    left: 0;
-    opacity: 0.75;
-    overflow: auto;
-    padding: 2px 20px;
-    position: absolute;
-    top: 80%;
-    width: 100%;
-    z-index: 8;
-}
-#speaker-note.invisible {
-    top: 101%;
-}
-.sidebar {
-    -moz-transition: margin 0.2s ease-in-out 0s;
-    display: block;
-    height: 100%;
-    margin: 0;
-    overflow: auto;
-    padding: 10px 16px;
-    position: absolute;
-    top: 0;
-    z-index: 999;
-}
-.sidebar.invisible {
-    margin-left: -400px;
-}
-.sidebar table {
-    border-collapse: collapse;
-}
-.sidebar caption {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 55px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.sidebar tr {
-    border-bottom: 1px solid #CCCCCC;
-    margin: 2px 0;
-}
-.sidebar th {
-    max-width: 300px;
-    text-align: left;
-}
-.sidebar td {
-    font-family: Monospace;
-    padding-left: 20px;
-    padding-right: 5px;
-    text-align: right;
-}
-nav#helpers {
-    background-color: black;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    bottom: 0;
-    left: 50%;
-    margin-left: -200px;
-    opacity: 0.1;
-    position: fixed;
-    text-align: center;
-    width: 400px;
-    z-index: 10;
-}
-nav#helpers:hover {
-    opacity: 0.5;
-}
-nav#helpers button {
-    background: none repeat scroll 0 0 transparent;
-    border: medium none;
-    color: white;
-    cursor: pointer;
-}
-.toc {
-    font-size: 10px;
-    position: relative;
-    top: -3px;
-}
-nav#helpers button#slide-no {
-    border: 1px solid white;
-    font-size: 10px;
-    margin-bottom: 4px;
-    padding: 4px;
-}
-#nav-next {
-    margin-right: 20px;
-}
-menu {
-    display: inline;
-}
