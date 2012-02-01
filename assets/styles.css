@@ -555,26 +555,26 @@ div.author::before {
 /* Size variants */
 
 article.smaller p,
-article.smaller ul {
+article.smaller ul, p.smaller, ul.smaller {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0;
 }
-article.smaller table {
+article.smaller table, table.smaller {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0;
 }
-article.smaller pre {
+article.smaller pre, pre.smaller {
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0;
 }
-article.smaller q {
+article.smaller q, q.smaller {
   font-size: 40px;
   line-height: 48px;
 }
-article.smaller q::before,
+article.smaller q::before, q.smaller::before, q.smaller::after
 article.smaller q::after {
   font-size: 60px;
 }
