@@ -106,6 +106,17 @@ body {
   background-position-x: 0, 840px;
 }
 
+
+.nobackground	{
+  background: url(images/colorbar.png) 0 bottom repeat-x;
+
+  border-bottom:0;
+
+  background-size: 100%;  
+
+  background-color: white;  
+  
+}
 /* Clickable/tappable areas */
 
 .slide-area {
