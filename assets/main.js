@@ -480,7 +480,7 @@ function updateHash() {
   location.replace('#' + (curSlide + 1));
 };
 
-/* Event listeners */
+/* Event listeners 
 
 function handleBodyKeyDown(event) {
   switch (event.keyCode) {
@@ -503,8 +503,8 @@ function handleBodyKeyDown(event) {
       break;
   }
 };
+*/
 
-/*
 function handleBodyKeyDown(event) {
   switch (event.keyCode) {
     case 39: // right arrow
@@ -541,7 +541,7 @@ function handleBodyKeyDown(event) {
       break;
   }
 };
-*/
+
 
 function addEventListeners() {
   document.addEventListener('keydown', handleBodyKeyDown, false);  
