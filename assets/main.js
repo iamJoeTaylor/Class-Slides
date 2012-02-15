@@ -484,39 +484,15 @@ function updateHash() {
 
 function handleBodyKeyDown(event) {
   switch (event.keyCode) {
-    case 39: // right arrow
-    //case 13: // Enter
-    //case 32: // space
-    //case 34: // PgDn
+    case 39:
       nextSlide();
       event.preventDefault();
       break;
 
-    case 37: // left arrow
-    //case 8: // Backspace
-    //case 33: // PgUp
+    case 37:
       prevSlide();
       event.preventDefault();
       break;
-
-    /*case 40: // down arrow
-      if (isChromeVoxActive()) {
-        speakNextItem();
-      } else {
-        nextSlide();
-      }
-      event.preventDefault();
-      break;
-
-    case 38: // up arrow
-      if (isChromeVoxActive()) {
-        speakPrevItem();
-      } else {
-        prevSlide();
-      }
-      event.preventDefault();
-      break;
-			*/
   }
 };
 
