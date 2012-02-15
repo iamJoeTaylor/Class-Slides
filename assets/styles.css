@@ -411,7 +411,7 @@ li::before {
   position: absolute;
 }
 
-pre, .snippet {
+pre, .snippet, .selector-snippet {
 	width:100%;
 	box-sizing:border-box;
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
