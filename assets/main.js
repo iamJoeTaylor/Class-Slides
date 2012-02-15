@@ -485,21 +485,21 @@ function updateHash() {
 function handleBodyKeyDown(event) {
   switch (event.keyCode) {
     case 39: // right arrow
-    case 13: // Enter
-    case 32: // space
-    case 34: // PgDn
+    //case 13: // Enter
+    //case 32: // space
+    //case 34: // PgDn
       nextSlide();
       event.preventDefault();
       break;
 
     case 37: // left arrow
-    case 8: // Backspace
-    case 33: // PgUp
+    //case 8: // Backspace
+    //case 33: // PgUp
       prevSlide();
       event.preventDefault();
       break;
 
-    case 40: // down arrow
+    /*case 40: // down arrow
       if (isChromeVoxActive()) {
         speakNextItem();
       } else {
@@ -516,6 +516,7 @@ function handleBodyKeyDown(event) {
       }
       event.preventDefault();
       break;
+			*/
   }
 };
 
@@ -580,6 +581,8 @@ function makeBuildLists() {
     }
   }
 };
+
+function``
 
 function handleDomLoaded() {
   slideEls = document.querySelectorAll('section.slides > article');
