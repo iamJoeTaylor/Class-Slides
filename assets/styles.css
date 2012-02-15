@@ -412,6 +412,8 @@ li::before {
 }
 
 pre, .snippet {
+	width:100%;
+	box-sizing:border-box;
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
 
   font-size: 20px;
