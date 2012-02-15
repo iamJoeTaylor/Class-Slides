@@ -413,6 +413,7 @@ li::before {
 
 pre, .snippet, .selector-snippet {
 	width:100%;
+	line-height:170%;
 	box-sizing:border-box;
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
 
