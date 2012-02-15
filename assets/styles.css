@@ -411,7 +411,7 @@ li::before {
   position: absolute;
 }
 
-pre {
+pre, .snippet {
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
 
   font-size: 20px;
