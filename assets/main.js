@@ -140,6 +140,9 @@ if (objCtr.defineProperty) {
 }
 /* ---------------------------------------------------------------------- */
 
+function $$(expr, con) { return [].slice.call((con || document).querySelectorAll(expr)); }
+
+
 /* Slide movement */
 
 function getSlideEl(no) {
@@ -481,47 +484,9 @@ function updateHash() {
 };
 
 /* Event listeners */
-
-function handleBodyKeyDown(event) {
-  switch (event.keyCode) {
-    case 40: // down arrow
-      if (isChromeVoxActive()) {
-        speakNextItem();
-      } else {
-        nextSlide();
-      }
-      event.preventDefault();
-      break;
-
-    case 38: // up arrow
-      if (isChromeVoxActive()) {
-        speakPrevItem();
-      } else {
-        prevSlide();
-      }
-      event.preventDefault();
-      break;
-  }
-};
-
 /*
 function handleBodyKeyDown(event) {
   switch (event.keyCode) {
-    case 39: // right arrow
-    case 13: // Enter
-    case 32: // space
-    case 34: // PgDn
-      nextSlide();
-      event.preventDefault();
-      break;
-
-    case 37: // left arrow
-    case 8: // Backspace
-    case 33: // PgUp
-      prevSlide();
-      event.preventDefault();
-      break;
-
     case 40: // down arrow
       if (isChromeVoxActive()) {
         speakNextItem();
@@ -543,9 +508,80 @@ function handleBodyKeyDown(event) {
 };
 */
 
-function addEventListeners() {
-  document.addEventListener('keydown', handleBodyKeyDown, false);  
+function handleBodyKeyDown(event) {
+	if(!inputHasFocus)	{
+	  switch (event.keyCode) {
+	    case 39: // right arrow
+	    case 13: // Enter
+	    case 32: // space
+	    case 34: // PgDn
+	      nextSlide();
+	      event.preventDefault();
+	      break;
+
+	    case 37: // left arrow
+	    case 8: // Backspace
+	    case 33: // PgUp
+	      prevSlide();
+	      event.preventDefault();
+	      break;
+
+	    case 40: // down arrow
+	      if (isChromeVoxActive()) {
+	        speakNextItem();
+	      } else {
+	        nextSlide();
+	      }
+	      event.preventDefault();
+	      break;
+
+	    case 38: // up arrow
+	      if (isChromeVoxActive()) {
+	        speakPrevItem();
+	      } else {
+	        prevSlide();
+	      }
+	      event.preventDefault();
+	      break;
+	  }
+	}
 };
+
+var inputHasFocus = false;
+
+function addEventListeners() {
+  document.addEventListener('keydown', handleBodyKeyDown, false); 
+
+	$$('textarea').forEach(function(field) {
+		field.onfocus = function() {
+		    inputHasFocus = true;
+		};
+		field.onblur = function() {
+		    inputHasFocus = false;
+		};
+	});
+
+	$$('input').forEach(function(field) {
+		field.onfocus = function() {
+		    inputHasFocus = true;
+		};
+		field.onblur = function() {
+		    inputHasFocus = false;
+		};
+	});
+
+ 	$$('pre').forEach(function(field) {
+		field.onfocus = function() {
+		    inputHasFocus = true;
+		};
+		field.onblur = function() {
+		    inputHasFocus = false;
+		};
+	});
+
+};
+
+
 
 /* Initialization */
 
@@ -619,6 +655,7 @@ function handleDomLoaded() {
 
   setupInteraction();
   makeBuildLists();
+	checkPlugins();
 
   document.body.classList.add('loaded');
 };
@@ -656,3 +693,7 @@ if (!window['_DEBUG'] && document.location.href.indexOf('?debug') !== -1) {
 } else {
   initialize();
 }
+
+
+
+
